@@ -4,4 +4,4 @@
 
 可扫描此二维码进行体验
  
-![二维码](https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/img/2020/wechatPrograme.jpg)
+![二维码](https://sbimg.cn/image/Mw6pN)
