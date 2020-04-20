@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTitleText": "萌宠解压图",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "black",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icon/page-false.png",
+      "selectedIconPath":"icon/page-true.png"
+    }, {
+      "pagePath":    "pages/cart/cart",
+      "text": "相片集",
+      "iconPath": "icon/picture-false.png",
+      "selectedIconPath":"icon/picture-true.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "icon/computer-false.png",
+      "selectedIconPath":"icon/computer-true.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

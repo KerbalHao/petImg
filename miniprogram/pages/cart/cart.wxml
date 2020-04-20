@@ -1,0 +1,26 @@
+<view class='container' bindtap='hideDrawer'>
+  <view class='header'>
+    <view class='title'>萌宠图片--{{category}}</view>
+    <image src='../../icon/icon-{{click}}.png' bindtap='showFilter' class='filter' id='filter'></image>
+  </view>
+	<view class="page-section-spacing">
+		<scroll-view scroll-y="true" style="height: 1260rpx;" lower-threshold='50' bindscrolltolower='lower' refresher-enabled='true' refresher-threshold='50' bindrefresherrefresh='refresh' refresher-triggered='{{refreshed}}'>
+			<view wx:for='{{imgList}}' wx:key='index'>
+        <view class='row'>
+          <image class='pic' src='{{item.src}}' mode='aspectFit'></image>
+          <button open-type="getUserInfo" mark:index='{{index}}'  bindgetuserinfo='collect'>
+          <image class='like' src='../../icon/like-{{item.like}}.png' mode='scaleToFill'></image>
+          </button>
+        </view>
+      </view>
+		</scroll-view>
+	</view>
+  <view class='drawer {{visible}}' id='drawer'>
+    <view class='drawer-title'>
+      请选择您喜爱的宠物种类
+    </view>
+    <view wx:for='{{petList}}' wx:key='index'>
+      <button type='default' size="default" mark:selected='{{item.val}}' bindtap='selectItem'>{{item.text}}</button>
+    </view>
+  </view>
+</view>

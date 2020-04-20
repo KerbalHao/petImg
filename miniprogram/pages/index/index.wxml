@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="page-body">
+		<view class="swiper-container">
+			<swiper indicator-dots="true" class='swiper {{flag}}' autoplay="true" interval="3000" duration="650" circular='true'>
+				<block wx:for="{{background}}" wx:key="index">
+					<swiper-item>
+						<view style='background:center/100% no-repeat url({{item.img}})' class='slide-item'></view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class='scroller'>
+			<button type="default" size='default' id='filter' bindtap='filter'>筛选</button>
+			<view class='img-container'>
+				<scroll-view scroll-y="true" style="height: 900px;" lower-threshold='100' refresher-enabled='true' refresher-threshold='50' bindscrolltolower="lower" bindscroll='scroll' bindrefresherrefresh='refresh' refresher-triggered='{{refreshed}}'>
+					<view class='img-list' wx:for='{{imgList}}' wx:key='index'>
+						<image src="{{item}}" lazy-load='true' mode='aspectFit' bindload='loaded' mark:src='{{item}}' bindtap='showImg'></image>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+	<view class='big-img {{visiableCls}}' bindtap='hideBigImg'>
+		<image src='{{selected}}' class='selected-img' mode='aspectFit' id='origin' ></image>
+	</view>
+</view>

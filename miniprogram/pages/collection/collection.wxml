@@ -1,0 +1,19 @@
+<view class='collection'>
+<view  class='header' wx:if='{{likeList.length > 0}}'>
+您已收藏 {{likeList.length}} 张图片
+</view>
+<view wx:else>
+  您未收藏任何图片
+</view>
+<scroll-view scroll-y="true" style="height: 1160rpx;">
+  <view wx:for='{{likeList}}' wx:key='*this'>
+    <view class='row'>
+      <image class='pic' src='{{item.src}}' mode='aspectFit'></image>
+      <button class='heart' bindtap='collect' mark:index='{{index}}' >
+        <image class='like' src='../../icon/like-true.png' mode='scaleToFill'></image>
+      </button>
+    </view>
+  </view>
+</scroll-view>
+
+</view>

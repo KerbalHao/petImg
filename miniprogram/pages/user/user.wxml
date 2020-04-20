@@ -1,0 +1,17 @@
+<!--pages/user/user.wxml-->
+<view class='user'>
+  <view class='header'>
+    <image class='avatar' src='../../icon/login-false.png' wx:if='{{!hasUserInfo && canIUse}}'></image>
+    <image  class='avatar' src='{{userInfo.avatarUrl}}' wx:else></image>
+    <view class='user-info'>
+      <view wx:if='{{!hasUserInfo && canIUse}}'>
+        <button type="primary" size="mini" bindgetuserinfo="getUserInfo" open-type="getUserInfo">获取微信授权</button>
+      </view>
+      <view wx:else>{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <button type='default' open-type="getUserInfo" class='collection' bindgetuserinfo='toCollection'>
+      <cover-image src='../../icon/blog-false.png' class='star'></cover-image>
+      我的收藏
+  </button>
+ </view>

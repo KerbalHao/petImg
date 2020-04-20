@@ -1,0 +1,5 @@
+/**app.wxss**/
+.container {
+  background: #ccc;
+  box-sizing: border-box;
+} 
