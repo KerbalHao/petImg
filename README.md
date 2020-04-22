@@ -4,4 +4,4 @@
 
 可扫描此二维码进行体验
  
-![二维码](https://sbimg.cn/image/Mw6pN)
+![二维码](https://wx2.sbimg.cn/2020/04/20/wechatPrograme.jpg)
